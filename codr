@@ -1,0 +1,21 @@
+import os
+import time
+
+while True:
+    print("\n\neverything divided by 100\n\n")
+    kiki = input("insert your number" + "\n\n" + "(or type 'quit' to exit): ")
+
+    if kiki.lower() == "quit":
+        print("Shutting down...")
+        time.sleep(3)
+        os.system('cls' if os.name == 'nt' else 'clear')
+        break  # Exit the while loop
+
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
+    try:
+        kiwi = int(kiki) / 10
+        print("\n\n" + str(kiwi))
+        print("\n\n" + str(kiki) + " divided by 100 = " + str(kiwi))
+    except ValueError:
+        print("\nInvalid input! Please insert a number.")
